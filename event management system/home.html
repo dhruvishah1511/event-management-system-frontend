@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="design.js"></script>
+    <!-- Custom styles -->
+    <style>
+        
+        body {
+            background-color: #f8f9fa; /* Set background color for the body */
+            color: #212529; /* Set text color */
+        }
+        .navbar-custom {
+            background-color: rgb(10, 34, 101); /* Light blue background */
+        }
+        .navbar-custom .navbar-nav .nav-link {
+            color: rgb(208, 212, 226); /* Light blue text */
+        }
+        .navbar-custom .navbar-nav .nav-link.active {
+            color: #06dbeebe; /* Light blue color */
+        }
+        .header {
+            padding: 1rem;
+            color: black;
+            background-color: lightgrey;
+            cursor: pointer;
+        }
+        .header1 {
+            padding: 1rem;
+            color: black;
+            cursor: pointer;
+        }
+        .main-news {
+            padding: 2rem;
+            background-color: lightgrey; /* Light gray background for INSIGHTS & NEWS */
+            color: #212529; /* Set text color */
+        }
+        .footer {
+            background-color: #f8f9fa; /* Set background color for the footer */
+            padding: 1rem;
+            text-align: center;
+        }
+        .card {
+            margin-bottom: 1rem;
+            background-color:grey; /* Dark gray background for cards */
+            color: #ffffff; /* White text */
+            height: 300px;
+            width:400px;
+        }
+        .circle-img {
+            width: 100px; /* Set width of circle image */
+            height: 100px; /* Set height of circle image */
+            border-radius: 50%; /* Make it a circle */
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+
+        .list-group-item {
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            color: #333;
+            padding: 9px 9px;
+            transition: transform 0.3s ease; /* Add transition for smooth effect */
+        }
+
+        .list-group-item:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .header:hover {
+            text-decoration: underline black; /* Add underline on hover */
+        }
+        .header1:hover {
+            text-decoration: underline black; /* Add underline on hover */
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #212529;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #212529;
+        }
+
+        .btn-primary {
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 767.98px) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .btn-primary {
+                font-size: 1rem;
+                padding: 5px 10px;
+            }
+        }
+        @keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.text-animation {
+    animation: slideInFromRight 1s ease-out;
+}
+
+    </style>
+</head>
+<body>
+    <!-- navbar part -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top">
+        <div class="container-fluid">
+            <!-- Logo and title -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" height="30" class="d-inline-block align-top">
+                Event<strong>hub</strong>
+            </a>
+            <!-- Toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- for vedio -->
+    <div class="container-fluid">
+        <video width="100%" height="auto" controls autoplay muted class="mb-3">
+            <source src="images/Marraige Events.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="container text-center mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-3 section" style="display: none;">
+                <img src="images/sites.png" alt="Circle Image 1" class="circle-img">
+                <h3 class="my-3">SITE SELECTION</h3>
+                <p>Destination possibilities are endless- we'll make sure you find the place that fits your event perfectly.</p>
+            </div>
+            <div class="col-md-3 section" style="display: none;">
+                <img src="images/em.png" alt="Circle Image 2" class="circle-img">
+                <h3 class="my-3">EVENT MANAGEMENT</h3>
+                <p>Whether it's improving contract terms or increasing revenues, we work tirelessly to make sure each event is more successful than the last.</p>
+            </div>
+            <div class="col-md-3 section" style="display: none;">
+                <img src="images/el.png" alt="Circle Image 3" class="circle-img">
+                <h3 class="my-3">EVENT LOGISTICS</h3>
+                <p>Researching before and analyzing after the event helps us make sure everything runs smoothly during the event.</p>
+            </div>
+            <div class="col-md-3 section" style="display: none;">
+                <img src="images/ma.png" alt="Circle Image 4" class="circle-img">
+                <h3 class="my-3">EVENT MARKETING</h3>
+                <p>Keeping your attendees and exhibitors up to date with branded, personalized communications; including a customized booking website, emails, and calls.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <a href="services.html" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <header class="header">
+        <div class="container-fluid text-center">
+            <h1>INSIGHTS & NEWS</h1>
+        </div>
+    </header>
+    <div class="main-news">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Inc. Magazine Unveils Its 38th Annual List of America's Fastest-Growing Private Companies - the Inc. 5000</h5>
+                            <p class="card-text">For the 3rd Time, EventHub Appears on the Inc. 5000, Ranking No. 2262 With Three-Year Revenue Growth of 178% Percent</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">EventHub Selected as 4th Time Recipient of Atlanta's Best and Brightest Companies to Work For</h5>
+                            <p class="card-text">EventHub has been selected as a recipient of the 2018 Atlanta's Best and Brightest Companies to Work For. This is EventHub's 4th time receiving this honor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">EventHub Ranks No. 1125 on the 2017 Inc. 5000</h5>
+                            <p class="card-text">Inc. magazine today ranked EventHub NO. 1125 on its 36th annual Inc. 5000, the most prestigious ranking of the nation's fastest-growing private companies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <header class="header1">
+                <div class="container-fluid text-center">
+                    <h1>Our Speciality Events includes</h1>
+                </div>
+            </header>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item">&#10004; Weddings</li>
+                    <li class="list-group-item">&#10004; Holiday Parties</li>
+                    <li class="list-group-item">&#10004; Sweet 16s</li>
+                    <li class="list-group-item">&#10004; Quinceraneras</li>
+                    <li class="list-group-item">&#10004; Baby Showers</li>
+                    <li class="list-group-item">&#10004; Graduations</li>
+                    <li class="list-group-item">&#10004; Birthdays</li>
+                    <li class="list-group-item">&#10004; Anniversaries</li>
+                    <li class="list-group-item">&#10004; Bar BQs & Picnic Events</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item">&#10004; Family Reunions</li>
+                    <li class="list-group-item">&#10004; Fashion Shows</li>
+                    <li class="list-group-item">&#10004; Film Openings</li>
+                    <li class="list-group-item">&#10004; Corporate Events</li>
+                    <li class="list-group-item">&#10004; Media Events</li>
+                    <li class="list-group-item">&#10004; Convention Booths</li>
+                    <li class="list-group-item">&#10004; Festivals</li>
+                    <li class="list-group-item">&#10004; Street Fairs</li>
+                </ul>
+            </div>
+            <div class="col-md-4 d-md-flex align-items-center justify-content-center">
+                <img src="images/os.png" alt="Special Event Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="main-news">
+    <div class="container p-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="images/sound.png" alt="Sound and Lightning" class="img-fluid">
+            </div>
+            <div class="col-md-6 text-center text-animation">
+                <h2><header class="header">
+                    <div class="container-fluid text-center">
+                        <h1>Sound and lighting</h1>
+                    </div>
+                </header></h2>
+                <p>Event Magic provides basic PA systems for smaller events, including press conferences and graduation ceremonies. Our technicians handle setup and operation, and we offer standard uplighting and string lighting for weddings and special events.</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="services.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+<br>
+<div class="container p-6">
+    <div class="row align-items-center">
+        <div class="col-md-6 text-center text-animation">
+            <h2><header class="header1">
+                <div class="container-fluid text-center">
+                    <h1>Test and tenopics</h1>
+                </div>
+            </header></h2>
+            <p>We offer tents from 10 x 10 to 40 x 100 and everything in between. We can do vendor tents for your festival or fair or a large tent to hold your wedding or outdoor event. Our tents can come with walls, lighting, tent liner, heating, flooring, and much more. Our tents are rated for high winds and have all the necessary fire requirements for permits and public events..</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="services.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="images/tents.png" alt="tents and tenopics" class="img-fluid">
+        </div>
+        
+    </div>
+</div>
+<br> 
+<div class="main-news">
+    <div class="container p-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="images/party.png" alt="Sound and Lightning" class="img-fluid">
+            </div>
+            <div class="col-md-6 text-center text-animation">
+                <h2><header class="header">
+                    <div class="container-fluid text-center">
+                        <h1>Party Rentals</h1>
+                    </div>
+                </header></h2>
+                <p>Event Magic has all of your party rental needs. From a couple of tables for your backyard party or a festival with hundreds we can handle all of your rentals needs. Tables, chairs, dance floors, heaters, table ware, linens, props, drape and much much more. Please fill out quote form to get an estimate for your event.</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="services.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<br>
+    <div class="row align-items-center">
+        <div class="col-md-6 text-center text-animation">
+            <h2><header class="header1">
+                <div class="container-fluid text-center">
+                    <h1>Stages and Riders</h1>
+                </div>
+            </header></h2>
+            <p>We can help you find the perfect solution for your staging needs. We offer a variety of stages and risers of different dimensions.  Our basic stage decks are 4 ft by 8 ft and we generally build upwards in 8″ intervals. We do create custom stages at various heights, widths & dimensions for specific purposes.</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="services.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="images/stages.png" alt="tents and tenopics" class="img-fluid">
+            <br>
+        </div>
+    
+        <div class="main-news">
+            <div class="container p-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="images/review.png" alt="Sound and Lightning" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 text-center text-animation">
+                        <h2><header class="header">Coustumer reviews</header></h2>
+                            <div class="container-fluid text-center">
+                                <h5>John Doe</h5>
+                    <p>"Great service and excellent products! Highly recommended!"</p>
+                    <h5 >Jane Smith</h5>
+                    <p >"I'm amazed by the quality of their work. Will definitely use their services again!"</p>
+                    <h5>Mike Johnson</h5>
+                    <p>"The team was very professional and delivered exactly what I wanted. 5 stars!"</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        </div>
+        <footer class="footer" style="background-color: #343a40; color: #fff; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <div class="container">
+                <pre>Thanks for visiting....</pre>
+            </div>
+        </footer>
+    
+    </footer>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
